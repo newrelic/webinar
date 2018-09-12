@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - 'npm install'
+  build:
+    commands:
+      - './node_modules/.bin/mocha test/tests.js --reporter json > ./build_events/testStats.json'
+  post_build:
+    commands:
+      - 'node ./build_events/test-results-to-insights.js'  
+
+artifacts:
+  files:
+    - './build_events/testStats.json'

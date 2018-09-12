@@ -1,0 +1,24 @@
+{
+  "name": "code-pipeline-demo-app",
+  "version": "1.0.0",
+  "description": "A simple demo application that will demonstrate how to instrument and measure your code pipeline",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/tests.js",
+    "start": "node server.js"
+  },
+  "author": "Eric Mittelhammer <emittelhammer@newrelic.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@newrelic/native-metrics": "^3.1.0",
+    "koa": "^2.5.2",
+    "koa-router": "^7.4.0",
+    "newrelic": "^4.8.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
